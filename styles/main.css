@@ -1,3 +1,20 @@
+html, body {
+    height: 100%;
+  }
+
+body {
+    display: flex;
+    flex-direction: column;
+  }
+
+.content {
+    flex: 1 0 auto;
+  }
+
+.footer {
+    flex-shrink: 0;
+  }
+
 body {
     background-color: #3E5271;
     color: white;
@@ -12,6 +29,13 @@ h1, h2 {
 footer {
     background-color:lightblue;
     text-align: center;
+}
+
+
+
+table {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .button {
@@ -56,6 +80,19 @@ footer {
     display: inline;
     align-items: center;
 }
+
+.text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+  }
+
 
 
 /* Mobile Rules */ 
@@ -103,3 +140,32 @@ footer {
       padding-left: 10px;
     }
   }
+
+
+    .container {
+        position: relative;
+        width: 50%;
+    }
+
+    .image {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .overlay {
+        position: absolute;
+        bottom: 0;
+        left: 100%;
+        right: 0;
+        background-color: green;
+        overflow: hidden;
+        width: 0;
+        height: 100%;
+        transition: .25s ease;
+    }
+
+    .container:hover .overlay {
+        width: 100%;
+        left: 0;
+    }
