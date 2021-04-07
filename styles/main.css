@@ -1,18 +1,85 @@
+header {
+    background-color: #3E5271;
+}
+
+main {
+    padding:1em;
+}
+
 body {
-    margin: 20px;
+    margin: 0px;
     background-color: #3E5271;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
+    padding:0;
 }
 
-h1 {
+tr {
+    padding: 1em;
+    border: solid black 3px;
+  }
+
+
+.star-wars {
+    /* Flexbox to center the entire element on the screen */
+    display: flex;
+    justify-content: center;
+    /* This is a magic number based on the context in which this snippet is used and effects the perspective */
+    height: 800px;
+    /* This sets allows us to transform the text on a 3D plane, and is somewhat a magic number */
+    perspective: 400px;
+    /* The rest is totally up to personal styling preferences */
+    color: #feda4a;
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 500%;
+    font-weight: 600;
+    letter-spacing: 6px;
+    line-height: 150%;
+    text-align: justify;
+}
+
+.crawl {
+    /* Position the element so we can adjust the top property in the animation */
+    position: relative;
+    /* Making sure the text is fully off the screen at the start and end of the animation */
+    top: -100px;
+    /* Defines the skew origin at the very center when we apply transforms on the animation */
+    transform-origin: 50% 100%;
+}
+
+/* We're calling this animation "crawl" */
+@keyframes crawl {
+    0% {
+        /* The element starts below the screen */
+        top: 0;
+        /* Rotate the text 20 degrees but keep it close to the viewer */
+        transform: rotateX(20deg) translateZ(0);
+    }
+    100% { 
+        /* This is a magic number, but using a big one to make sure the text is fully off the screen at the end */
+        top: -6000px;
+        /* Slightly increasing the rotation at the end and moving the text far away from the viewer */
+        transform: rotateX(25deg) translateZ(-2500px);
+    }
+}
+
+.crawl {
+    /* Position the element so we can adjust the top property in the animation */
+    position: relative;
+    /* Defines the skew origin at the very center when we apply transforms on the animation */
+    transform-origin: 50% 100%;
+    /* Adds the crawl animation, which plays for one minute */
+    animation: crawl 60s linear;
+}
+
+h1, h3, table {
     text-align: center;
 }
 
 footer {
-    text-align: right;
+    background-color:#99BADD;
     position: relative;
-    border-top: 10x violet;
+    text-align: center;
 }
 
 .button {
@@ -20,11 +87,9 @@ footer {
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
     transition: background 300mx;
     display: inline-block;
-    background: blue;
     color: white;
     text-decoration: none;
     font-weight: bold;
-    border-radius: 5px;
 }
 
 .button:hover {
@@ -60,15 +125,15 @@ footer {
     display: inline;
 }
 
+
 /* Mobile Rules */ 
 @media (max-width: 767px) {
     .primary-nav ul {
         top: 64px;
         width: 100%;
         position: absolute;
-        background: black;
         transform: translateY(-100vh);
-        background: gray;
+        background: lightblue;
     }
 
     .primary-nav ul.active {
@@ -81,5 +146,9 @@ footer {
 
     .primary-nav a {
         color: white;
+    }
+
+    iframe {
+        width: 100%;
     }
 }
