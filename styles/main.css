@@ -10,6 +10,39 @@ html, body {
     flex-shrink: 0;
   }
 
+iframe {
+    align-items: center;
+    width: 100%;
+}
+
+
+blockquote {
+    font-size: 20px;
+    font-style: italic;
+    position: relative;
+    color: gold;
+}
+
+blockquote:before {
+    display: block;
+    padding-left: 10px;
+    content: "\201C";
+    font-size: 80px;
+    position: absolute;
+    left: -55px;
+    top: -20px;
+    color: gold;
+}
+
+.center-pic {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.less-space-below {
+    margin-bottom: -10px;
+}
+
 body {
     background-color: #3E5271;
     color: white;
