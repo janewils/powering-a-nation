@@ -7,7 +7,6 @@ var links = document.querySelector(".links");
 /* desired behavior */
 function toggle() {
   links.classList.toggle("active");
-  alert("Hi!");
 }
 
 /* wire it up */

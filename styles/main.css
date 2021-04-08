@@ -232,4 +232,9 @@ footer {
         height: 100%;
         transition: .75s ease;
     }
+
+    .column-grid {
+        display: grid; 
+        grid-template-columns: 1fr 1fr 1fr;
+    }
   }
