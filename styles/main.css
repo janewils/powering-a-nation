@@ -78,11 +78,16 @@ h1, h3 {
 }
 
 footer {
-    background-color:#7B8B7E;
     text-align: center;
     color: gold;
+    font-size: 12px;
 }
 
+.footer-credits {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
 
 table {
     margin-left:auto;
