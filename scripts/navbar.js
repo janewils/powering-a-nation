@@ -11,4 +11,3 @@ function toggle() {
 
 /* wire it up */
 toggleButton.addEventListener("click", toggle);
-
